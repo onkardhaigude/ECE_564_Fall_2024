@@ -1,0 +1,133 @@
+#------------------------------------------------------------
+#
+# Basic Synthesis Script (TCL format)
+#                                  
+# Revision History                
+#   1/15/03  : Author Shane T. Gehring - from class example
+#   2/09/07  : Author Zhengtao Yu      - from class example
+#   12/14/07 : Author Ravi Jenkal      - updated to 180 nm & tcl
+#
+#------------------------------------------------------------
+#---------------------------------------------------------
+# Read in Verilog file and map (synthesize) onto a generic
+# library.
+# MAKE SURE THAT YOU CORRECT ALL WARNINGS THAT APPEAR
+# during the execution of the read command are fixed 
+# or understood to have no impact.
+# ALSO CHECK your latch/flip-flop list for unintended 
+# latches                                            
+#---------------------------------------------------------
+read_verilog -rtl $::env(RTL_FILES)
+Error: Required argument 'file_list' was not found (CMD-007)
+read_sverilog -rtl $::env(RTL_SV_FILES)
+Loading db file '/mnt/coe/workspace/ece/ece720-common/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db'
+Loading db file '/mnt/apps/public/COE/synopsys_apps/syn/T-2022.03-SP4/libraries/syn/dw_foundation.sldb'
+Loading db file '/mnt/apps/public/COE/synopsys_apps/syn/T-2022.03-SP4/libraries/syn/gtech.db'
+Loading db file '/mnt/apps/public/COE/synopsys_apps/syn/T-2022.03-SP4/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm'
+  Loading link library 'gtech'
+Loading sverilog file '/mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/dut.sv'
+Running PRESTO HDLC
+Compiling source file /mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/dut.sv
+Opening include file /mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/common.vh
+Warning: Could not open default SVF file /mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/synthesis/svf/default.svf for writing.
+
+Statistics for case statements in always block at line 290 in file
+	'/mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/dut.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           292            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine MyDesign line 81 in file
+		'/mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/dut.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 89 in file
+		'/mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/dut.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| compute_complete_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 100 in file
+		'/mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/dut.sv'.
+=================================================================================================
+|             Register Name             |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================================
+|           total_writes_reg            | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|           matrix_a_rows_reg           | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|           matrix_a_cols_reg           | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|           matrix_b_cols_reg           | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+| dut__tb__sram_input_write_enable_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| dut__tb__sram_weight_write_enable_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         total_elements_b_reg          | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+=================================================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 119 in file
+		'/mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/dut.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   done_count_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 131 in file
+		'/mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/dut.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   first_write_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 143 in file
+		'/mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/dut.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|    write_count_reg    | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|   input_address_reg   | Flip-flop |  15   |  Y  | N  | N  | N  | N  | N  | N  |
+|  weight_address_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    row_counter_reg    | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+| a_column_counter_reg  | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+| b_element_counter_reg | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+| b_column_counter_reg  | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 251 in file
+		'/mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/dut.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  accum_result_reg   | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   input_data_reg    | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   weight_data_reg   | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 273 in file
+		'/mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/dut.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| scratchpad_addr_reg | Flip-flop |  14   |  Y  | N  | N  | N  | N  | N  | N  |
+|   result_addr_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/mnt/ncsudrive/o/obdhaigu/proj_564/ece564_project_negative_v2/ece564_transformer_self_attention/rtl/MyDesign.db:MyDesign'
+Loaded 1 design.
+Current design is 'MyDesign'.
+MyDesign

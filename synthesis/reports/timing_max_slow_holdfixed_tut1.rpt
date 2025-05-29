@@ -1,0 +1,59 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : MyDesign
+Version: T-2022.03-SP4
+Date   : Sat Nov 16 14:11:21 2024
+****************************************
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm
+Wire Load Model Mode: top
+
+  Startpoint: tb__dut__sram_input_read_data[7]
+              (input port clocked by clk)
+  Endpoint: total_elements_b_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  input external delay                                  0.6580     0.6580 r
+  tb__dut__sram_input_read_data[7] (in)                 0.0721     0.7301 r
+  U2180/Z (BUF_X4)                                      0.2567     0.9868 r
+  U5847/ZN (XNOR2_X2)                                   0.4025     1.3893 r
+  U1260/ZN (NAND2_X1)                                   0.2402     1.6295 f
+  U1259/ZN (OAI22_X1)                                   0.3888     2.0183 r
+  U5852/S (FA_X1)                                       0.7744     2.7928 f
+  U5857/S (FA_X1)                                       0.7980     3.5908 r
+  U5858/S (FA_X1)                                       0.6681     4.2588 f
+  U2945/ZN (NAND2_X1)                                   0.2067     4.4655 r
+  U3771/ZN (OAI21_X2)                                   0.1051     4.5706 f
+  U1829/ZN (AOI21_X2)                                   0.3589     4.9295 r
+  U5267/ZN (OR3_X2)                                     0.2172     5.1467 r
+  U5264/ZN (NAND3_X2)                                   0.0640     5.2107 f
+  U5906/ZN (XNOR2_X2)                                   0.2800     5.4907 f
+  U5907/ZN (NAND2_X2)                                   0.0867     5.5775 r
+  U5741/ZN (NAND2_X1)                                   0.0713     5.6488 f
+  total_elements_b_reg[14]/D (DFF_X2)                   0.0000     5.6488 f
+  data arrival time                                                5.6488
+
+  clock clk (rise edge)                                 6.0000     6.0000
+  clock network delay (ideal)                           0.0000     6.0000
+  clock uncertainty                                    -0.0500     5.9500
+  total_elements_b_reg[14]/CK (DFF_X2)                  0.0000     5.9500 r
+  library setup time                                   -0.3011     5.6489
+  data required time                                               5.6489
+  --------------------------------------------------------------------------
+  data required time                                               5.6489
+  data arrival time                                               -5.6488
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0001
+
+
+1
